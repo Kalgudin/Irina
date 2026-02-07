@@ -18,7 +18,7 @@ while not player :
     elif x == 2:
         player = [100, 12]
     else:
-        print('False////')
+        print('Вы ввели некорректные данные....')
 
 
 
