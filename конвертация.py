@@ -1,3 +1,13 @@
+'''
+import requests
+
+val = {'U': "CNY", 'D': "USD", 'E': "EUR"}
+
+data = requests.get('https://www.cbr-xml-daily.ru/daily_json.js').json()
+print(data)
+print (data['Valute']['CNY']['Value'])
+'''
+
 courses = {'D': 77.05, 'E': 91.05, 'U': 11.11, 'R': 1}
 names = {'D': 'долларов', 'E': 'евро', 'U': 'юаней', 'R': 'рублей'}
 
