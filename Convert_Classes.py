@@ -1,8 +1,9 @@
 import requests
 
 data = requests.get('https://www.cbr-xml-daily.ru/daily_json.js').json()
-data['Valute']['RUB']['Value'] = 1
-#print (data['Valute']['RUB']['Value'])
+rub = {'RUB': {'Value': 1, 'name': 'российский рубль'}}
+data['Valute'].update(rub)
+print (data['Valute']['RUB']['Value'])
 
 class Currency:
     def __init__(self, data, name): 
@@ -18,9 +19,9 @@ class Currency:
 
 print('конвератция валют')
 print('доллар - USD')
-print('евро - EUR')
-print('юань - CNY')
-print('рубль - RUB')
+print('евро   - EUR')
+print('юань   - CNY')
+print('рубль  - RUB')
 
 v1 = input('Введите какую валюту вы хотите обменять: ').upper()
 v2 = input('Введите на какую валюту вы хотите обменять: ').upper()
