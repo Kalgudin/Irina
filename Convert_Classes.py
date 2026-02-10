@@ -1,9 +1,9 @@
 import requests
 
 data = requests.get('https://www.cbr-xml-daily.ru/daily_json.js').json()
-rub = {'RUB': {'Value': 1, 'name': 'российский рубль'}}
+rub = {'RUB': {'Value': 1, 'name': 'Российский рубль'}}
 data['Valute'].update(rub)
-print (data['Valute']['RUB']['Value'])
+print (data)
 
 class Currency:
     def __init__(self, data, name): 
